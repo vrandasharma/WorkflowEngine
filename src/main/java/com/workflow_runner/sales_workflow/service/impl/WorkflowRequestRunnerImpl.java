@@ -1,6 +1,6 @@
 package com.workflow_runner.sales_workflow.service.impl;
 
-import com.workflow_runner.sales_workflow.dto.WorkflowRawRequestDTO;
+import com.workflow_runner.sales_workflow.dto.WorkflowRequestDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepDetailsDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepsInfoDTO;
 import com.workflow_runner.sales_workflow.repo.IWorkflowProductCatalogRepo;
@@ -21,7 +21,7 @@ public class WorkflowRequestRunnerImpl implements IWorkflowRunner {
     private IWorkflowProductCatalogRepo workflowProductCatalogRepo;
 
     @Override
-    public void executeWorkflowSteps(WorkflowRawRequestDTO wfrawRequestModel) {
+    public void executeWorkflowSteps(WorkflowRequestDTO wfrawRequestModel) {
         try {
             WorkflowStepsInfoDTO stepsInfoDTO = workflowProductCatalogRepo.fetchStepDtoByProductCode(wfrawRequestModel.getMetaData().getProductCode());
 

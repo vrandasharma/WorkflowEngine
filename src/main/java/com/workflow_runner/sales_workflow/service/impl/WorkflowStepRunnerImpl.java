@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.workflow_runner.sales_workflow.dto.WorkflowRawRequestDTO;
+import com.workflow_runner.sales_workflow.dto.WorkflowRequestDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepDetailsDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepOperationDetailsDTO;
 import com.workflow_runner.sales_workflow.service.IWorkflowCommandRunner;
@@ -28,7 +28,7 @@ public class WorkflowStepRunnerImpl implements IWorkflowStepRunner {
 	private ExecutorService commonThreadPool;
 
 	@Override
-	public Boolean executeStep(WorkflowStepDetailsDTO stepInfo, WorkflowRawRequestDTO wfRequest) {
+	public Boolean executeStep(WorkflowStepDetailsDTO stepInfo, WorkflowRequestDTO wfRequest) {
 		try {
 			//TBD Create an entry in WF_SUMMARY table against request key
 			//workflowCommandRunner.wfRequest = this.wfRequest;
