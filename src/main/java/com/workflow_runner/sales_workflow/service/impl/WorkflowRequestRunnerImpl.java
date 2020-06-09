@@ -4,13 +4,13 @@ import com.workflow_runner.sales_workflow.dto.WorkflowRawRequestDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepDetailsDTO;
 import com.workflow_runner.sales_workflow.dto.WorkflowStepsInfoDTO;
 import com.workflow_runner.sales_workflow.repo.IWorkflowProductCatalogRepo;
-import com.workflow_runner.sales_workflow.service.IWorkflowRunnerInterface;
+import com.workflow_runner.sales_workflow.service.IWorkflowRunner;
 import com.workflow_runner.sales_workflow.service.IWorkflowStepRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class WorkflowRequestRunnerImpl implements IWorkflowRunnerInterface {
+public class WorkflowRequestRunnerImpl implements IWorkflowRunner {
     @Autowired
     private IWorkflowStepRunner workflowStepRunnerService;
 
