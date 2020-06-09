@@ -17,6 +17,8 @@ public class WorkflowStepDetailsDTO {
 	private Integer stepKey;
 	private String  productCode;
 	private StepConfgurationDTO stepConfiguration;
+	private Integer stepSequence;
+	private Integer stepCascadeSequence;
 	private List<WorkflowStepOperationDetailsDTO> stepOperations = new ArrayList<>();
 	
 	public List<WorkflowStepOperationDetailsDTO> getStepOperations() {
